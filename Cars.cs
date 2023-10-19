@@ -3,11 +3,11 @@ namespace Used_car_business
 {
 	public class Car
 	{
-		public bool isNew { get; set; }
-        public int providerPrice { get; set; }
+		public bool? isNew { get; set; }
+        public int? providerPrice { get; set; }
         public string? brand { get; set; }
         public string? model { get; set; }
-        public Location office { get; set; }
+        public Location? office { get; set; }
 
         private int sellingPrice { get; set; }
 
@@ -25,30 +25,28 @@ namespace Used_car_business
 	public class TourismCar : Car
 	{
 		public int passengerCapacity;
-		public TourismCar(string brand, string model) : base(brand, model, office)
+		public TourismCar(string brand, string model, Location office, bool isNew, int passengerCapacity) : base(brand, model, office, isNew)
 		{
-
+            this.passengerCapacity = passengerCapacity;
 		}
 	}
 
     public class IndustrialCar : Car
     {
-		public float maxTons; 
-        public IndustrialCar(string brand, string model) : base(brand, model)
+        public int maxCarryWeight;
+        public IndustrialCar(string brand, string model, Location office, bool isNew, int maxCarryWeight) : base(brand, model, office, isNew)
         {
-
+            this.maxCarryWeight = maxCarryWeight;
         }
-
     }
 
     public class OffRoadCar : Car
     {
-		public int horsePower;
-        public OffRoadCar(string brand, string model) : base(brand, model)
+        public int horsePower;
+        public OffRoadCar(string brand, string model, Location office, bool isNew, int horsePower) : base(brand, model, office, isNew)
         {
-
+            this.horsePower = horsePower;
         }
-
     }
 }
 
