@@ -1,0 +1,15 @@
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/bin/Debug/net7.0/Used-car-business
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/bin/Debug/net7.0/Used-car-business.deps.json
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/bin/Debug/net7.0/Used-car-business.runtimeconfig.json
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/bin/Debug/net7.0/Used-car-business.dll
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/bin/Debug/net7.0/Used-car-business.pdb
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/obj/Debug/net7.0/Used-car-business.csproj.AssemblyReference.cache
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/obj/Debug/net7.0/Used-car-business.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/obj/Debug/net7.0/Used-car-business.AssemblyInfoInputs.cache
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/obj/Debug/net7.0/Used-car-business.AssemblyInfo.cs
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/obj/Debug/net7.0/Used-car-business.csproj.CoreCompileInputs.cache
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/obj/Debug/net7.0/Used-car-business.dll
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/obj/Debug/net7.0/refint/Used-car-business.dll
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/obj/Debug/net7.0/Used-car-business.pdb
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/obj/Debug/net7.0/Used-car-business.genruntimeconfig.cache
+/Users/bray/Library/CloudStorage/OneDrive-UPB/Tercer Semestre/POO/Used-car-business/obj/Debug/net7.0/ref/Used-car-business.dll
