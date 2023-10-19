@@ -7,14 +7,16 @@ namespace Used_car_business
         public int providerPrice { get; set; }
         public string? brand { get; set; }
         public string? model { get; set; }
-        public Location location { get; set; }
+        public Location office { get; set; }
 
         private int sellingPrice { get; set; }
 
-        public Car (string brand, string model, Location site, bool isNew)
+        public Car (string brand, string model, Location office, bool isNew)
 		{
 			this.brand = brand;
 			this.model = model;
+            this.office = office;
+            this.isNew = isNew;
 		}
 
 	}
@@ -23,7 +25,7 @@ namespace Used_car_business
 	public class TourismCar : Car
 	{
 		public int passengerCapacity;
-		public TourismCar(string brand, string model) : base(brand, model)
+		public TourismCar(string brand, string model) : base(brand, model, office)
 		{
 
 		}
