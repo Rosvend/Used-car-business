@@ -15,8 +15,25 @@ namespace Used_car_business
 			this.nit = nit;
 			this.canRepair = canRepair;
 			this.cars = cars;
-
         }
-	}
+
+        public bool RepairCar(Car carToRepair)
+		{
+			if (canRepair)
+			{
+				if (cars.Contains(carToRepair) && (carToRepair.repairments.Count != 0 || carToRepair.repairments == null))
+				{
+                    foreach (string repairment in carToRepair.repairments)
+					{
+						Console.WriteLine($"{repairment}, reparado");
+					}
+
+					return true;
+					
+				}
+			}
+			return false;
+		}
+    }
 }
 
