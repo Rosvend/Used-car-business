@@ -1,94 +1,91 @@
-using System;
-using Used_car_business;
-
-namespace Used_car_business
+// Purpose: Contains the Person, Seller, CommissionSeller, WageSeller, RecurrentCustomer, and PotentialBuyer classes.
+namespace UsedCarBusiness
 {
     public class Person
     {
-        public string name { get; set; }
-        public string email { get; set; }
-        public int phone { get; set; }
-        public string id { get; set; }
+        public string Name { get; }
+        public string Email { get; }
+        public int Phone { get; }
+        public string Id { get; }
 
         public Person(string name, string email, string id, int phone)
         {
-            this.name = name;
-            this.email = email;
-            this.id = id;
-            this.phone = phone;
+            Name = name;
+            Email = email;
+            Id = id;
+            Phone = phone;
         }
     }
 
     public class Seller : Person
     {
-        public string location { get; set; }
+        public string Location { get; }
 
         public Seller(string name, string email, string id, int phone, string location) : base(name, email, id, phone)
         {
-            this.location = location;
+            Location = location;
         }
     }
 
     public class CommissionSeller : Seller
     {
-        public int cars_sold { get; set; }
+        public int CarsSold { get; }
 
-        public CommissionSeller(string name, string email, string id, int phone, string location, int cars_sold) : base(name, email, id, phone, location)
+        public CommissionSeller(string name, string email, string id, int phone, string location, int carsSold) : base(name, email, id, phone, location)
         {
-            this.cars_sold = cars_sold;
+            CarsSold = carsSold;
         }
 
-        public int calculate_salary()
+        public int CalculateSalary()
         {
-            return cars_sold * 5000;
+            return CarsSold * 5000;
         }
     }
 
     public class WageSeller : Seller
     {
-        public int hours_worked { get; set; }
-        public int hourly_wage { get; set; }
+        public int HoursWorked { get; }
+        public int HourlyWage { get; }
 
-        public WageSeller(string name, string email, string id, int phone, string location, int hours_worked, int hourly_wage) : base(name, email, id, phone, location)
+        public WageSeller(string name, string email, string id, int phone, string location, int hoursWorked, int hourlyWage) : base(name, email, id, phone, location)
         {
-            this.hours_worked = hours_worked;
-            this.hourly_wage = hourly_wage;
+            HoursWorked = hoursWorked;
+            HourlyWage = hourlyWage;
         }
 
-        public int calculate_salary()
+        public int CalculateSalary()
         {
-            return hours_worked * hourly_wage;
+            return HoursWorked * HourlyWage;
         }
     }
 
-    public class Buyer : Person
+    public class RecurrentCustomer : Person
     {
-        public int cars_bought { get; set; }
+        public int CarsBought { get; }
 
-        public Buyer(string name, string email, string id, int phone, int cars_bought) : base(name, email, id, phone)
+        public RecurrentCustomer(string name, string email, string id, int phone, int carsBought) : base(name, email, id, phone)
         {
-            this.cars_bought = cars_bought;
+            CarsBought = carsBought;
         }
 
-        public string buy_car()
+        public string BuyCar()
         {
-            return "You have bought " + cars_bought + " cars.";
+            return "You have bought " + CarsBought + " cars.";
         }
-
     }
 
     public class PotentialBuyer : Person
     {
-        public string InterestedCars { get; set; }
-        public string PreOrders { get; set; }
+        public string InterestedCars { get; }
+        public string PreOrders { get; }
 
         public PotentialBuyer(string name, string email, string id, int phone, string interestedCars, string preOrders) : base(name, email, id, phone)
         {
-            this.InterestedCars = interestedCars;
-            this.PreOrders = preOrders;
+            InterestedCars = interestedCars;
+            PreOrders = preOrders;
         }
 
-        public string preorder_car()
+        public string PreorderCar()
         {
             return "You have preordered " + PreOrders + " cars.";
         }
