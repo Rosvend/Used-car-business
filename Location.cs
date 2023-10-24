@@ -17,23 +17,23 @@ namespace Used_car_business
 			this.cars = cars;
         }
 
-        public bool RepairCar(Car carToRepair)
-		{
-			if (canRepair)
-			{
-				if (cars.Contains(carToRepair) && (carToRepair.repairments.Count != 0 || carToRepair.repairments == null))
-				{
-                    foreach (string repairment in carToRepair.repairments)
-					{
-						Console.WriteLine($"{repairment}, reparado");
-					}
+public bool RepairCar(Car carToRepair)
+{
+    if (canRepair)
+    {
+        if (cars.Contains(carToRepair) && (carToRepair.repairments == null || carToRepair.repairments.Count == 0))
+        {
+            Console.WriteLine("No hay reparaciones para este carro.");
+            return false;
+        }
 
-					return true;
-					
-				}
-			}
-			return false;
-		}
+        foreach (string repairment in carToRepair.repairments)
+        {
+            Console.WriteLine($"{repairment}, reparado");
+        }
+
+        return true;
     }
+    return false;
 }
 
