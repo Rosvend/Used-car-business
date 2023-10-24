@@ -5,10 +5,10 @@ namespace Used_Car_Business
 {
     public class Person
     {
-        public string Name { get; }
-        public string Email { get; }
-        public uint Phone { get; }
-        public string Id { get; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public uint Phone { get; set; }
+        public string Id { get; set; }
 
         public Person(string name, string email, string id, uint phone)
         {
@@ -21,7 +21,7 @@ namespace Used_Car_Business
 
     public class Seller : Person
     {
-        public Location Location { get; }
+        public Location Location { get; set; }
 
         public Seller(string name, string email, string id, uint phone, Location location) : base(name, email, id, phone)
         {
@@ -31,7 +31,7 @@ namespace Used_Car_Business
 
     public class CommissionSeller : Seller
     {
-        public int CarsSold { get; }
+        public int CarsSold { get; set; }
 
         public CommissionSeller(string name, string email, string id, uint phone, Location location, int carsSold) : base(name, email, id, phone, location)
         {
@@ -46,8 +46,8 @@ namespace Used_Car_Business
 
     public class WageSeller : Seller
     {
-        public int HoursWorked { get; }
-        public int HourlyWage { get; }
+        public int HoursWorked { get; set; }
+        public int HourlyWage { get; set; }
 
         public WageSeller(string name, string email, string id, uint phone, Location location, int hoursWorked, int hourlyWage) : base(name, email, id, phone, location)
         {
@@ -63,7 +63,7 @@ namespace Used_Car_Business
 
     public class RecurrentCustomer : Person
     {
-        public int CarsBought { get; }
+        public int CarsBought { get; set; }
 
         public RecurrentCustomer(string name, string email, string id, uint phone, int carsBought) : base(name, email, id, phone)
         {
@@ -78,10 +78,10 @@ namespace Used_Car_Business
 
     public class PotentialBuyer : Person
     {
-        public string InterestedCars { get; }
-        public string PreOrders { get; }
+        public List<Car> InterestedCars { get; set; }
+        public List<Car> PreOrders { get; set; }
 
-        public PotentialBuyer(string name, string email, string id, uint phone, string interestedCars, string preOrders) : base(name, email, id, phone)
+        public PotentialBuyer(string name, string email, string id, uint phone, List<Car> interestedCars, List<Car> preOrders) : base(name, email, id, phone)
         {
             InterestedCars = interestedCars;
             PreOrders = preOrders;
