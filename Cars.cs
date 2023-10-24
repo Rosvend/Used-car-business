@@ -11,12 +11,14 @@ namespace Used_car_business
 
         private int sellingPrice { get; set; }
 
-        public Car (string brand, string model, Location office, bool isNew)
+        public Car (string brand, string model, Location office, bool isNew, int providerPrice, int sellingPrice)
 		{
 			this.brand = brand;
 			this.model = model;
             this.office = office;
             this.isNew = isNew;
+            this.providerPrice = providerPrice;
+            this.sellingPrice = sellingPrice;
 		}
 
 	}
@@ -25,7 +27,7 @@ namespace Used_car_business
 	public class TourismCar : Car
 	{
 		public int passengerCapacity;
-		public TourismCar(string brand, string model, Location office, bool isNew, int passengerCapacity) : base(brand, model, office, isNew)
+		public TourismCar(string brand, string model, Location office, bool isNew, int providerPrice, int sellingPrice, int passengerCapacity) : base(brand, model, office, isNew, providerPrice, sellingPrice)
 		{
             this.passengerCapacity = passengerCapacity;
 		}
@@ -34,7 +36,7 @@ namespace Used_car_business
     public class IndustrialCar : Car
     {
         public int maxCarryWeight;
-        public IndustrialCar(string brand, string model, Location office, bool isNew, int maxCarryWeight) : base(brand, model, office, isNew)
+        public IndustrialCar(string brand, string model, Location office, bool isNew,int providerPrice, int sellingPrice, int maxCarryWeight) : base(brand, model, office, isNew, providerPrice, sellingPrice)
         {
             this.maxCarryWeight = maxCarryWeight;
         }
@@ -43,7 +45,7 @@ namespace Used_car_business
     public class OffRoadCar : Car
     {
         public int horsePower;
-        public OffRoadCar(string brand, string model, Location office, bool isNew, int horsePower) : base(brand, model, office, isNew)
+        public OffRoadCar(string brand, string model, Location office, bool isNew, int providerPrice, int sellingPrice, int horsePower) : base(brand, model, office, isNew, providerPrice, sellingPrice)
         {
             this.horsePower = horsePower;
         }
