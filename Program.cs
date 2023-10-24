@@ -23,16 +23,15 @@ namespace Used_car_business
 
             List<Car> cars = new List<Car>() { };
 
-            Location medallork = new Location("Medallork",123,false,cars);
-            Location udea = new Location("UdeA", 4321, true,cars);
-            Location santaElena = new Location("Santa Elena", 9876, true,cars);
+            Location Medallork = new Location("Medallork",123,false,cars);
+            Location Udea = new Location("UdeA", 4321, true,cars);
+            Location UPB = new Location("UPB", 9876, true,cars);
 
 
-            cars.Add(new TourismCar("chevrolet", "tour","medallork", false, 10000,200000,5));
-            cars.Add(new IndustrialCar("Tesla", "indust","udea", false,500000,1000000,1000));
-            cars.Add(new OffRoadCar("toyota", "corolla","santaElena", false, 10000,200000,5));
+            cars.Add(new TourismCar("Chevrolet", "Tourism","Medallork", false, 10000,200000,5));
+            cars.Add(new IndustrialCar("Tesla", "Industrial","Udea", false,500000,1000000,1000));
+            cars.Add(new OffRoadCar("Toyota", "Off-Road","UPB", false, 10000,200000,5));
 
-            Location mainOffice = new Location("San Felix", 32009, true, cars);
         }
     }
 }
