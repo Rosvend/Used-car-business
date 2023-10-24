@@ -35,10 +35,10 @@ namespace Used_car_business
 
     public class IndustrialCar : Car
     {
-        public int maxCarryWeight;
-        public IndustrialCar(string brand, string model, Location office, bool isNew,int providerPrice, int sellingPrice, int maxCarryWeight) : base(brand, model, office, isNew, providerPrice, sellingPrice)
+        public int maxium_carry_weight;
+        public IndustrialCar(string brand, string model, Location office, bool isNew,int providerPrice, int sellingPrice, int maxium_carry_weight) : base(brand, model, office, isNew, providerPrice, sellingPrice)
         {
-            this.maxCarryWeight = maxCarryWeight;
+            this.maxium_carry_weight = maxium_carry_weight;
         }
     }
 

@@ -38,7 +38,7 @@ namespace Used_Car_Business
 
         public int CalculateSalary()
         {
-            return CarsSold * 5000;
+            return CarsSold * 10000;
         }
     }
 
