@@ -1,4 +1,4 @@
-// Purpose: Contains the Person, Seller, CommissionSeller, WageSeller, RecurrentCustomer, and PotentialBuyer classes.
+// Purpose: Contains the Person, Seller, CommissionSeller, WageSeller, RecurrentCustomer, and PotentialCustomer classes.
 using Used_car_business;
 
 namespace Used_Car_Business
@@ -76,12 +76,12 @@ namespace Used_Car_Business
         }
     }
 
-    public class PotentialBuyer : Person
+    public class PotentialCustomer : Person
     {
         public List<Car> InterestedCars { get; set; }
         public List<Car> PreOrders { get; set; }
 
-        public PotentialBuyer(string name, string email, string id, uint phone, List<Car> interestedCars, List<Car> preOrders) : base(name, email, id, phone)
+        public PotentialCustomer(string name, string email, string id, uint phone, List<Car> interestedCars, List<Car> preOrders) : base(name, email, id, phone)
         {
             InterestedCars = interestedCars;
             PreOrders = preOrders;
