@@ -1,14 +1,16 @@
 // Purpose: Contains the Person, Seller, CommissionSeller, WageSeller, RecurrentCustomer, and PotentialBuyer classes.
+using Used_car_business;
+
 namespace Used_Car_Business
 {
     public class Person
     {
         public string Name { get; }
         public string Email { get; }
-        public int Phone { get; }
+        public uint Phone { get; }
         public string Id { get; }
 
-        public Person(string name, string email, string id, int phone)
+        public Person(string name, string email, string id, uint phone)
         {
             Name = name;
             Email = email;
@@ -19,9 +21,9 @@ namespace Used_Car_Business
 
     public class Seller : Person
     {
-        public string Location { get; }
+        public Location Location { get; }
 
-        public Seller(string name, string email, string id, int phone, string location) : base(name, email, id, phone)
+        public Seller(string name, string email, string id, uint phone, Location location) : base(name, email, id, phone)
         {
             Location = location;
         }
@@ -31,7 +33,7 @@ namespace Used_Car_Business
     {
         public int CarsSold { get; }
 
-        public CommissionSeller(string name, string email, string id, int phone, string location, int carsSold) : base(name, email, id, phone, location)
+        public CommissionSeller(string name, string email, string id, uint phone, Location location, int carsSold) : base(name, email, id, phone, location)
         {
             CarsSold = carsSold;
         }
@@ -47,7 +49,7 @@ namespace Used_Car_Business
         public int HoursWorked { get; }
         public int HourlyWage { get; }
 
-        public WageSeller(string name, string email, string id, int phone, string location, int hoursWorked, int hourlyWage) : base(name, email, id, phone, location)
+        public WageSeller(string name, string email, string id, uint phone, Location location, int hoursWorked, int hourlyWage) : base(name, email, id, phone, location)
         {
             HoursWorked = hoursWorked;
             HourlyWage = hourlyWage;
@@ -63,7 +65,7 @@ namespace Used_Car_Business
     {
         public int CarsBought { get; }
 
-        public RecurrentCustomer(string name, string email, string id, int phone, int carsBought) : base(name, email, id, phone)
+        public RecurrentCustomer(string name, string email, string id, uint phone, int carsBought) : base(name, email, id, phone)
         {
             CarsBought = carsBought;
         }
@@ -79,7 +81,7 @@ namespace Used_Car_Business
         public string InterestedCars { get; }
         public string PreOrders { get; }
 
-        public PotentialBuyer(string name, string email, string id, int phone, string interestedCars, string preOrders) : base(name, email, id, phone)
+        public PotentialBuyer(string name, string email, string id, uint phone, string interestedCars, string preOrders) : base(name, email, id, phone)
         {
             InterestedCars = interestedCars;
             PreOrders = preOrders;
