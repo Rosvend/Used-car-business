@@ -22,15 +22,18 @@ namespace Used_car_business
             {
                 if (cars.Contains(carToRepair))
                 {
-
                     if (canRepair)
                     {
-                        foreach (string repairment in carToRepair.repairments)
+                        if (carToRepair.repairments != null && carToRepair.repairments.Count > 0)
                         {
-                            Console.WriteLine($"{repairment}, reparado");
-                            carToRepair.repairments.Remove(repairment);
+                            foreach (string repairment in carToRepair.repairments)
+                            {
+                                Console.WriteLine($"{repairment}, reparado");
+                                carToRepair.repairments.Remove(repairment);
+                            }
+                            return true;
                         }
-                        return true;
+                        Console.WriteLine("Este automovil no necesita reparaciones");
                     }
                     Console.WriteLine("Esta sede no esta habilitada para realizar reparaciones.");
                     return false;
