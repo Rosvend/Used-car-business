@@ -1,4 +1,4 @@
-// Purpose: Contains the Person, Seller, CommissionSeller, WageSeller, RecurrentCustomer, and PotentialBuyer classes.
+
 namespace Used_Car_Business
 {
     public class Person

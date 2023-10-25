@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Used_car_business
+namespace Used_Car_Business
 {
     public class Location
     {
@@ -28,6 +28,37 @@ namespace Used_car_business
                     Console.WriteLine("Car repaired successfully.");
                     return true;
                 }
+            }
+            return false;
+        }
+
+        public bool SellCar(Car carToSell)
+        {
+            if (Cars.Contains(carToSell))
+            {
+                Cars.Remove(carToSell);
+                Console.WriteLine("Car sold successfully.");
+                return true;
+            }
+            return false;
+        }
+
+        public bool BuyCar(Car carToBuy)
+        {
+            if (!Cars.Contains(carToBuy))
+            {
+                Cars.Add(carToBuy);
+                Console.WriteLine("Car bought successfully.");
+                return true;
+            }
+            return false;
+        }
+
+        public bool check_stock(List<Car> cars)
+        {
+            if (cars.Count > 0)
+            {
+                return true;
             }
             return false;
         }
